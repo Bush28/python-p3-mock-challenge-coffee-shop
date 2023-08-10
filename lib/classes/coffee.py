@@ -28,7 +28,7 @@ class Coffee:
     def customers(self, new_customer=None):
         from classes.customer import Customer
         
-        if new_customer not in self._customers and isinstance(new_customer, Customer):
+        if new_customer not in self._customers and type(new_customer) is Customer:
             self._customers.append(new_customer)
         
         return self._customers
